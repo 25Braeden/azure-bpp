@@ -1,0 +1,144 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+#titleSlide h1 {
+    white-space: normal;
+    color: #000;
+    background: transparent;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure space between top and bottom */
+    align-items: center;
+    height: 100vh;
+    padding: 60px 20px 20px 20px; /* Adjust padding to ensure consistent spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    gap: 15px;
+    align-self: flex-end; /* Align navigation to the bottom right */
+    margin-top: auto; /* Push navigation to the bottom */
+}
+
+.navigation a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #000;
+    background-color: #fff; /* Add background color for better visibility */
+    padding: 10px; /* Add padding for better click area */
+    border-radius: 5px; /* Add border radius for better aesthetics */
+    border: 1px solid #000; /* Add border for better visibility */
+}
+
+.heading-bar {
+    width: 100%;
+    background-color: #00A36C;
+    padding: 30px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.heading-bar h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content li {
+    margin-bottom: 10px;
+}
+
+.content ul.comment {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.content ul.comment li {
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+}
+
+/* Style for the highlighted list items */
+.highlighted-list > li {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: make the text bold */
+}
+
+/* Style for the nested comment list items */
+.highlighted-list .comment li {
+    font-size: 1em; /* Adjust the font size as needed */
+    font-weight: normal; /* Ensure the text is not bold */
+    margin-left: 20px; /* Optional: add indentation */
+    color: #555; /* Optional: change the text color */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
