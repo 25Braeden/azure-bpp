@@ -1,32 +1,17 @@
+let currentSlide = 1;
+
 function go(direction) {
-    // Get the current file name from the URL
-    const currentFile = window.location.pathname.split('/').pop();
-    
-    // Determine the current slide number
-    let currentSlideNumber;
-    if (currentFile === 'index.html') {
-        currentSlideNumber = 1; // Set to 1 for index.html
-    } else {
-        currentSlideNumber = parseInt(currentFile.match(/\d+/)[0]);
-    }
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const newSlide = currentSlide + direction;
 
-    // Calculate the new slide number
-    const newSlideNumber = currentSlideNumber + direction;
-
-    // Generate the new file name
-    let newFile;
-    if (newSlideNumber === 1) {
-        newFile = 'index.html'; // Adjusted path for index.html
-    } else if (newSlideNumber < 1) {
-        // Handle case where newSlideNumber is less than 1
-        alert("You are already on the first slide.");
+    if (newSlide < 1 || newSlide > totalSlides) {
+        alert("No more slides in this direction.");
         return;
-    } else {
-        newFile = `slide${newSlideNumber}.html`;
     }
 
-    // Navigate to the new file
-    window.location.href = newFile;
+    document.getElementById(`slide${currentSlide}`).style.display = 'none';
+    document.getElementById(`slide${newSlide}`).style.display = 'block';
+    currentSlide = newSlide;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
